@@ -11,167 +11,148 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
 
-  <header class="hero">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="brand">
-          <img src="assets/logo.png" alt="Tess N' Treats Logo">
-          <div class="brand-text">
-            <h1>Tess N' Treats</h1>
-            <p>— Delicacy Home Kitchen —</p>
-          </div>
-        </a>
+  <style>
+    .hero{
+      position:relative;
+      min-height:720px;
+      background:
+        linear-gradient(90deg, rgba(34,16,12,.88) 0%, rgba(55,28,20,.68) 42%, rgba(55,28,20,.16) 72%, rgba(55,28,20,.05) 100%),
+        url('assets/hero-bg.jpg') center/cover no-repeat;
+      color:#fff4e7;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">☰</button>
+    .hero::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-16px;
+      height:44px;
+      background:var(--cream);
+      border-top:3px solid rgba(200,155,86,.75);
+      border-radius:50% 50% 0 0 / 100% 100% 0 0;
+      transform:scaleX(1.02);
+    }
 
-        <nav class="nav-links" id="navMenu">
-          <a href="index.html" class="active">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#treats">Our Treats</a>
-          <a href="#gifting">Gifting</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact" class="pre-btn">Pre-Order Now</a>
-        </nav>
-      </div>
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+      padding:22px 0 10px;
+      position:relative;
+      z-index:10;
+    }
 
-      <div class="hero-content">
-        <div class="hero-copy reveal">
-          <h2>Indulge in<br>Sweet Perfection</h2>
-          <p>Custom-Made Desserts for Every Occasion</p>
-          <a href="#treats" class="menu-btn">Explore Our Menu</a>
-        </div>
-      </div>
-    </div>
-  </header>
+    .brand{
+      display:flex;
+      align-items:flex-start;
+      gap:18px;
+      flex-shrink:0;
+    }
 
-  <main class="container">
+    .brand img{
+      width:170px;
+      height:170px;
+      object-fit:contain;
+      margin-top:-8px;
+    }
 
-    <section class="top-cards">
-      <div class="cards-3">
-        <article class="food-card reveal">
-          <img src="assets/card-brownie.jpg" alt="Gourmet Cakes">
-          <div class="caption">
-            <h3>Gourmet Cakes</h3>
-            <p>Decadent &amp; Beautiful Cakes</p>
-          </div>
-        </article>
+    .brand-text{
+      padding-top:22px;
+    }
 
-        <article class="food-card reveal">
-          <img src="assets/card-jar.jpg" alt="Delicious Jars">
-          <div class="caption">
-            <h3>Delicious Jars</h3>
-            <p>Irresistible Dessert Jars</p>
-          </div>
-        </article>
+    .brand-text h1{
+      font-family:'Great Vibes',cursive;
+      font-size:4.2rem;
+      font-weight:400;
+      color:#f4c3c0;
+      line-height:1;
+      margin-top:2px;
+    }
 
-        <article class="food-card reveal">
-          <img src="assets/card-squash.jpg" alt="Fresh Fruit Squash">
-          <div class="caption">
-            <h3>Fresh Fruit Squash</h3>
-            <p>Refreshing &amp; Fruity Beverages</p>
-          </div>
-        </article>
-      </div>
-    </section>
+    .brand-text p{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.15rem;
+      color:#f2dcc2;
+      margin-top:8px;
+      letter-spacing:.4px;
+    }
 
-    <section class="section" id="treats">
-      <div class="section-title reveal">
-        <div class="ornament"><span>❦</span></div>
-        <h2>Our Specialities</h2>
-        <p>Treat Yourself to Our Signature Delights</p>
-      </div>
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:30px;
+      flex-wrap:wrap;
+      padding-top:18px;
+    }
 
-      <div class="cards-4">
-        <article class="mini-card reveal">
-          <img src="assets/special-brownie.jpg" alt="Brownies">
-          <div class="caption"><h4>Brownies</h4></div>
-        </article>
+    .nav-links a{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.24rem;
+      color:#f2dfc6;
+      transition:all .3s ease;
+    }
 
-        <article class="mini-card reveal">
-          <img src="assets/special-cookies.jpg" alt="Cookies">
-          <div class="caption"><h4>Cookies</h4></div>
-        </article>
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:var(--gold-soft);
+    }
 
-        <article class="mini-card reveal">
-          <img src="assets/special-puddings.jpg" alt="Puddings">
-          <div class="caption"><h4>Puddings</h4></div>
-        </article>
+    .pre-btn{
+      background:linear-gradient(180deg,#8a4d3c 0%, #693529 100%);
+      border:1px solid rgba(255,255,255,.15);
+      color:#fff0e0;
+      padding:12px 22px;
+      box-shadow:0 8px 18px rgba(0,0,0,.22);
+      border-radius:4px;
+    }
 
-        <article class="mini-card reveal" id="gifting">
-          <img src="assets/special-gifting.jpg" alt="Gifting and Events">
-          <div class="caption"><h4>Gifting &amp; Events</h4></div>
-        </article>
-      </div>
-    </section>
+    .menu-toggle{
+      display:none;
+      background:transparent;
+      border:1px solid rgba(255,255,255,.18);
+      color:#fff;
+      width:46px;
+      height:46px;
+      border-radius:10px;
+      font-size:1.2rem;
+      cursor:pointer;
+    }
 
-    <section class="occasion" id="about">
-      <div class="section-title reveal">
-        <div class="ornament"><span>❦</span></div>
-        <h2>Perfect for Every Occasion</h2>
-        <p>Celebrate, Gift, and Indulge in Sweet Delights</p>
-      </div>
+    .hero-content{
+      position:relative;
+      z-index:3;
+      display:flex;
+      align-items:center;
+      min-height:500px;
+      padding:10px 0 90px;
+    }
 
-      <div class="occasion-items">
-        <div class="occasion-item reveal">
-          <div class="icon">🎉</div>
-          <h5>Celebrations &amp; Parties</h5>
-        </div>
+    .hero-copy{
+      max-width:540px;
+    }
 
-        <div class="occasion-item reveal">
-          <div class="icon">🎁</div>
-          <h5>Custom Orders</h5>
-        </div>
+    .hero-copy h2{
+      font-family:'Great Vibes',cursive;
+      font-size:6.1rem;
+      line-height:.9;
+      font-weight:400;
+      color:#f1c87d;
+      margin-bottom:18px;
+    }
 
-        <div class="occasion-item reveal">
-          <div class="icon">🎁</div>
-          <h5>Luxury Gifting</h5>
-        </div>
-      </div>
-    </section>
-  </main>
+    .hero-copy p{
+      font-family:'Cormorant Garamond',serif;
+      font-size:2rem;
+      color:#fff4e8;
+      margin-bottom:24px;
+    }
 
-  <section class="testimonial" id="gallery">
-    <div class="container">
-      <img src="assets/lady.png" alt="Client" class="lady">
-
-      <h3 class="testimonial-title reveal">Client Testimonials</h3>
-
-      <div class="testimonial-text reveal">
-        <span class="quote">“</span>
-        Absolutely delicious! The best brownies and cakes I’ve ever had!
-        <span class="quote">”</span>
-      </div>
-
-      <div class="dots reveal">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="footer-nav reveal" id="contact">
-        <a href="#about">About Us</a>
-        <a href="#treats">Our Treats</a>
-        <a href="#gifting">Gifting</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <div class="socials reveal">
-        <span>f</span>
-        <span>ig</span>
-        <span>x</span>
-      </div>
-
-      <div class="copyright reveal">
-        © 2024 Tess N' Treats. All Rights Reserved.
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    .hero-copy .menu-btn{
+      display:inline-block;
+      background:linear-gradient(180deg,#945644 0%,#6e3a2d 100%);
+     
