@@ -923,4 +923,31 @@
 
   <script src="script.js"></script>
 </body>
+  @media (max-width: 860px) {
+
+  .navbar {
+    flex-direction: row;          /* 🔥 keep logo + menu in one line */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    align-items: center;
+  }
+
+  .brand img {
+    width: 110px;                /* 🔥 increase from small size */
+    height: auto;
+    margin-top: 0;
+  }
+
+  .brand-text {
+    display: none;               /* 🔥 hide text on mobile for clean look */
+  }
+
+  .menu-toggle {
+    top: 18px;
+    right: 0;
+  }
+}
 </html>
