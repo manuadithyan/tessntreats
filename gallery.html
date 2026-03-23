@@ -4,22 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | Tess N' Treats</title>
+  <meta name="description" content="Browse the gallery of Tess N' Treats featuring brownies, cookies, puddings, dessert jars, gifting boxes and more." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .inner-hero{
+      min-height: 420px;
+      background:
+        linear-gradient(90deg, rgba(34,16,12,.88) 0%, rgba(55,28,20,.68) 42%, rgba(55,28,20,.16) 72%, rgba(55,28,20,.05) 100%),
+        url('assets/hero-bg.jpg') center/cover no-repeat;
+      color:#fff4e7;
+      display:flex;
+      align-items:center;
+      position:relative;
+      box-shadow:var(--shadow);
+    }
+    .inner-hero::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-16px;
+      height:44px;
+      background:var(--cream);
+      border-top:3px solid rgba(200,155,86,.75);
+      border-radius:50% 50% 0 0 / 100% 100% 0 0;
+      transform:scaleX(1.02);
+    }
+    .inner-hero-content{
+      position:relative;
+      z-index:2;
+      padding:120px 0 80px;
+      max-width:700px;
+    }
+    .inner-hero h1{
+      font-family:'Great Vibes',cursive;
+      font-size:5rem;
+      color:#f1c87d;
+      font-weight:400;
+      line-height:1;
+      margin-bottom:12px;
+    }
+    .inner-hero p{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.9rem;
+      color:#fff4e7;
+    }
+    .gallery-grid-page{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      padding:50px 0 30px;
+    }
+    .gallery-card{
+      overflow:hidden;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+    .gallery-card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      transition:.35s ease;
+    }
+    .gallery-card:hover img{
+      transform:scale(1.04);
+    }
+    @media (max-width:950px){
+      .gallery-grid-page{grid-template-columns:1fr 1fr;}
+      .inner-hero h1{font-size:4rem;}
+      .inner-hero p{font-size:1.5rem;}
+    }
+    @media (max-width:650px){
+      .gallery-grid-page{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
-  <div class="topbar"><div class="container"><div>A visual taste of Tess N' Treats</div><div>hello@tessntreats.com • +971 XX XXX XXXX</div></div></div>
-  <header class="site-header"><div class="container navbar"><a href="index.html" class="brand"><div class="brand-mark">T</div><div><h1>Tess N' Treats</h1><p>Delicacy Home Kitchen</p></div></a><nav class="nav-menu" id="navMenu"><div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a><a class="active" href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div></nav><div class="nav-actions"><a class="btn btn-primary" href="contact.html">Pre-Order Now</a><button class="menu-toggle" id="menuToggle">☰</button></div></div></header>
 
-  <section class="page-hero"><div class="container hero-inner"><div><span class="eyebrow">Styled Product Photography</span><div class="hero-title-script">Gallery</div><div class="hero-title">A premium visual showcase for your desserts, gifting moments and celebration setups.</div><p class="hero-text">Replace the placeholders below with your best photos. Use bright natural lighting and close-up detail shots to reinforce the boutique luxury feel of the brand.</p></div><div class="hero-card"><div class="visual img-jars"></div><div class="content"><h3>Visual Branding Matters</h3><p>Strong photography helps customers immediately understand the quality, warmth and premium presentation of your products.</p></div></div></div></section>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Tess N' Treats Logo">
+        <div class="brand-text">
+          <h1>Tess N' Treats</h1>
+          <p>— Delicacy Home Kitchen —</p>
+        </div>
+      </a>
 
-  <section class="section"><div class="container"><div class="section-title"><span class="mini">Visual Showcase</span><h2 class="script">Sweet Moments</h2><p>Use this page to display your finest cakes, brownies, pudding jars, squash bottles, gifting boxes and celebration layouts.</p></div><div class="gallery-grid"><div class="gallery-item large"></div><div class="gallery-item"></div><div class="gallery-item"></div><div class="gallery-item"></div><div class="gallery-item"></div><div class="gallery-item"></div><div class="gallery-item"></div></div></div></section>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">☰</button>
 
-  <section class="section-sm"><div class="container grid grid-3"><article class="panel icon-card"><div class="icon-badge">📷</div><h3>Product Close-Ups</h3><p>Highlight texture, layers, toppings and finish with styled close shots.</p></article><article class="panel icon-card"><div class="icon-badge">🎀</div><h3>Gifting Presentation</h3><p>Show premium packaging, ribbons, jars and curated event-ready assortments.</p></article><article class="panel icon-card"><div class="icon-badge">🍰</div><h3>Celebration Styling</h3><p>Include dessert tables, cakes, return gifts and occasion-based setups.</p></article></div></section>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Our Treats</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="pre-btn">Pre-Order Now</a>
+      </nav>
+    </div>
+  </header>
 
-  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Tess N' Treats</h3><p>Luxury visual storytelling for handcrafted desserts and gifting moments.</p></div><div><h4>Quick Links</h4><ul class="footer-links-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html">Menu</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h4>Gallery Themes</h4><ul class="footer-links-list"><li>Cakes</li><li>Jars</li><li>Brownies</li><li>Gifting</li></ul></div><div><h4>Contact</h4><ul class="footer-links-list"><li>hello@tessntreats.com</li><li>+971 XX XXX XXXX</li><li>Dubai, UAE</li></ul></div></div><div class="copyright">© 2026 Tess N' Treats. All rights reserved.</div></div></footer>
+  <section class="inner-hero">
+    <div class="container">
+      <div class="inner-hero-content reveal">
+        <h1>Gallery</h1>
+        <p>A visual collection of our handcrafted delicacies, dessert jars, gifting boxes and celebration favourites.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="gallery-grid-page">
+      <div class="gallery-card reveal"><img src="assets/hero-bg.jpg" alt="Hero dessert display"></div>
+      <div class="gallery-card reveal"><img src="assets/card-brownie.jpg" alt="Brownie card image"></div>
+      <div class="gallery-card reveal"><img src="assets/card-jar.jpg" alt="Dessert jar image"></div>
+      <div class="gallery-card reveal"><img src="assets/card-squash.jpg" alt="Fresh fruit squash image"></div>
+      <div class="gallery-card reveal"><img src="assets/special-brownie.jpg" alt="Brownie special"></div>
+      <div class="gallery-card reveal"><img src="assets/special-cookies.jpg" alt="Cookies special"></div>
+      <div class="gallery-card reveal"><img src="assets/special-puddings.jpg" alt="Puddings special"></div>
+      <div class="gallery-card reveal"><img src="assets/special-gifting.jpg" alt="Gifting box special"></div>
+      <div class="gallery-card reveal"><img src="assets/lady.png" alt="Client portrait"></div>
+    </section>
+  </main>
+
+  <section class="testimonial">
+    <div class="container">
+      <img src="assets/lady.png" alt="Client" class="lady">
+
+      <h3 class="testimonial-title reveal">A Gallery of Sweet Moments</h3>
+
+      <div class="testimonial-text reveal">
+        <span class="quote">“</span>
+        Every image tells the story of handcrafted taste, elegant presentation and moments made sweeter.
+        <span class="quote">”</span>
+      </div>
+
+      <div class="footer-nav reveal">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Our Treats</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="socials reveal">
+        <span>f</span>
+        <span>ig</span>
+        <span>x</span>
+      </div>
+
+      <div class="copyright reveal">
+        © 2024 Tess N' Treats. All Rights Reserved.
+      </div>
+    </div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
