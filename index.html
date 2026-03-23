@@ -3,95 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tess N' Treats | Luxury Delicacy Home Kitchen</title>
+  <title>Tess N' Treats | Delicacy Home Kitchen</title>
   <meta name="description" content="Luxury delicacy home kitchen for custom pre-orders, puddings, brownies, cookies, cakes, dessert jars and fresh fruit squash for celebrations, gifting, events and parties." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="float-whatsapp" href="https://wa.me/971000000000" aria-label="WhatsApp">✆</a>
-  <div class="topbar"><div class="container"><div>Custom Pre-Orders Only • Luxury Desserts for Every Occasion</div><div>hello@tessntreats.com • +971 XX XXX XXXX</div></div></div>
-  <header class="site-header">
-    <div class="container navbar">
-      <a href="index.html" class="brand"><div class="brand-mark">T</div><div><h1>Tess N' Treats</h1><p>Delicacy Home Kitchen</p></div></a>
-      <nav class="nav-menu" id="navMenu"><div class="nav-links">
-        <a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
-      </div></nav>
-      <div class="nav-actions"><a class="btn btn-primary" href="contact.html">Pre-Order Now</a><button class="menu-toggle" id="menuToggle">☰</button></div>
-    </div>
-  </header>
 
-  <section class="page-hero hero-home">
-    <div class="container hero-inner">
-      <div>
-        <span class="eyebrow">Luxury Handmade Desserts for Every Occasion</span>
-        <div class="hero-title-script">Sweet Elegance</div>
-        <div class="hero-title">Custom-crafted treats for celebrations, gifting, events and intimate gatherings.</div>
-        <p class="hero-text">Tess N' Treats is a premium delicacy home kitchen specialising in handcrafted puddings, brownies, cookies, cakes, dessert jars and fresh fruit squash. Every order is prepared beautifully on a custom pre-order basis with a boutique luxury touch.</p>
-        <div class="hero-buttons"><a class="btn btn-primary" href="menu.html">Explore Our Treats</a><a class="btn btn-light" href="contact.html">Book a Pre-Order</a></div>
+  <header class="hero">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="brand">
+          <img src="assets/logo.png" alt="Tess N' Treats Logo">
+          <div class="brand-text">
+            <h1>Tess N' Treats</h1>
+            <p>— Delicacy Home Kitchen —</p>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">☰</button>
+
+        <nav class="nav-links" id="navMenu">
+          <a href="index.html" class="active">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#treats">Our Treats</a>
+          <a href="#gifting">Gifting</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="pre-btn">Pre-Order Now</a>
+        </nav>
       </div>
-      <div class="hero-card">
-        <div class="visual dessert"></div>
-        <div class="content">
-          <h3>Signature Dessert Experience</h3>
-          <p>From creamy puddings to indulgent brownies and refreshing fruit squash, Tess N' Treats brings handcrafted sweetness to your most special moments.</p>
-          <div class="tags"><span class="tag">Puddings</span><span class="tag">Brownies</span><span class="tag">Dessert Jars</span><span class="tag">Fresh Squash</span></div>
+
+      <div class="hero-content">
+        <div class="hero-copy reveal">
+          <h2>Indulge in<br>Sweet Perfection</h2>
+          <p>Custom-Made Desserts for Every Occasion</p>
+          <a href="#treats" class="menu-btn">Explore Our Menu</a>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="section-sm"><div class="container grid grid-3">
-    <article class="card"><div class="image img-cake"></div><div class="body"><h3>Gourmet Cakes</h3><p>Elegant celebration cakes crafted for birthdays, anniversaries and memorable milestones.</p></div></article>
-    <article class="card"><div class="image img-jars"></div><div class="body"><h3>Delicious Jars</h3><p>Beautiful layered dessert jars created for gifting, dessert tables and stylish indulgence.</p></div></article>
-    <article class="card"><div class="image img-squash"></div><div class="body"><h3>Fresh Fruit Squash</h3><p>Refreshing handcrafted fruit blends perfect for parties, return gifts and elegant hosting.</p></div></article>
-  </div></section>
+  <main class="container">
 
-  <section class="section">
+    <section class="top-cards">
+      <div class="cards-3">
+        <article class="food-card reveal">
+          <img src="assets/card-brownie.jpg" alt="Gourmet Cakes">
+          <div class="caption">
+            <h3>Gourmet Cakes</h3>
+            <p>Decadent &amp; Beautiful Cakes</p>
+          </div>
+        </article>
+
+        <article class="food-card reveal">
+          <img src="assets/card-jar.jpg" alt="Delicious Jars">
+          <div class="caption">
+            <h3>Delicious Jars</h3>
+            <p>Irresistible Dessert Jars</p>
+          </div>
+        </article>
+
+        <article class="food-card reveal">
+          <img src="assets/card-squash.jpg" alt="Fresh Fruit Squash">
+          <div class="caption">
+            <h3>Fresh Fruit Squash</h3>
+            <p>Refreshing &amp; Fruity Beverages</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="treats">
+      <div class="section-title reveal">
+        <div class="ornament"><span>❦</span></div>
+        <h2>Our Specialities</h2>
+        <p>Treat Yourself to Our Signature Delights</p>
+      </div>
+
+      <div class="cards-4">
+        <article class="mini-card reveal">
+          <img src="assets/special-brownie.jpg" alt="Brownies">
+          <div class="caption"><h4>Brownies</h4></div>
+        </article>
+
+        <article class="mini-card reveal">
+          <img src="assets/special-cookies.jpg" alt="Cookies">
+          <div class="caption"><h4>Cookies</h4></div>
+        </article>
+
+        <article class="mini-card reveal">
+          <img src="assets/special-puddings.jpg" alt="Puddings">
+          <div class="caption"><h4>Puddings</h4></div>
+        </article>
+
+        <article class="mini-card reveal" id="gifting">
+          <img src="assets/special-gifting.jpg" alt="Gifting and Events">
+          <div class="caption"><h4>Gifting &amp; Events</h4></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="occasion" id="about">
+      <div class="section-title reveal">
+        <div class="ornament"><span>❦</span></div>
+        <h2>Perfect for Every Occasion</h2>
+        <p>Celebrate, Gift, and Indulge in Sweet Delights</p>
+      </div>
+
+      <div class="occasion-items">
+        <div class="occasion-item reveal">
+          <div class="icon">🎉</div>
+          <h5>Celebrations &amp; Parties</h5>
+        </div>
+
+        <div class="occasion-item reveal">
+          <div class="icon">🎁</div>
+          <h5>Custom Orders</h5>
+        </div>
+
+        <div class="occasion-item reveal">
+          <div class="icon">🎁</div>
+          <h5>Luxury Gifting</h5>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="testimonial" id="gallery">
     <div class="container">
-      <div class="section-title"><span class="mini">Our Signature Selection</span><h2 class="script">Our Treats</h2><p>Discover a premium menu of handcrafted delicacies thoughtfully created for dessert lovers, curated gifting and sophisticated celebrations.</p></div>
-      <div class="grid grid-4">
-        <article class="card"><div class="image img-brownies"></div><div class="body"><h3>Brownies</h3><p>Rich, fudgy and decadent brownies with a boutique homemade finish.</p></div></article>
-        <article class="card"><div class="image img-cookies"></div><div class="body"><h3>Cookies</h3><p>Buttery handcrafted cookies ideal for gifting boxes, tea tables and parties.</p></div></article>
-        <article class="card"><div class="image img-puddings"></div><div class="body"><h3>Puddings</h3><p>Silky, indulgent and beautifully layered signature pudding favourites.</p></div></article>
-        <article class="card"><div class="image img-gifting"></div><div class="body"><h3>Gifting & Events</h3><p>Curated sweet experiences for celebrations, favours, dessert tables and elegant gifting.</p></div></article>
+      <img src="assets/lady.png" alt="Client" class="lady">
+
+      <h3 class="testimonial-title reveal">Client Testimonials</h3>
+
+      <div class="testimonial-text reveal">
+        <span class="quote">“</span>
+        Absolutely delicious! The best brownies and cakes I’ve ever had!
+        <span class="quote">”</span>
+      </div>
+
+      <div class="dots reveal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="footer-nav reveal" id="contact">
+        <a href="#about">About Us</a>
+        <a href="#treats">Our Treats</a>
+        <a href="#gifting">Gifting</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="socials reveal">
+        <span>f</span>
+        <span>ig</span>
+        <span>x</span>
+      </div>
+
+      <div class="copyright reveal">
+        © 2024 Tess N' Treats. All Rights Reserved.
       </div>
     </div>
   </section>
 
-  <section class="section-sm">
-    <div class="container">
-      <div class="section-title"><span class="mini">Why Choose Us</span><h2>Perfect for Every Occasion</h2><p>Tess N' Treats is designed for people who want their sweet moments to feel refined, memorable and beautifully presented.</p></div>
-      <div class="grid grid-3">
-        <article class="panel icon-card"><div class="icon-badge">🎉</div><h3>Celebrations</h3><p>Birthdays, anniversaries and intimate family gatherings.</p></article>
-        <article class="panel icon-card"><div class="icon-badge">🎁</div><h3>Luxury Gifting</h3><p>Premium edible gifting with warm boutique finish and elegant presentation.</p></article>
-        <article class="panel icon-card"><div class="icon-badge">✨</div><h3>Events & Parties</h3><p>Curated treats for dessert tables, festive boxes and social occasions.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-sm"><div class="container banner"><div class="inner"><div><h3>Designed to elevate gifting, events and celebration tables.</h3><p>Whether you are hosting a birthday, planning return gifts or arranging sweets for a special gathering, Tess N' Treats brings a premium handcrafted charm that feels personal and luxurious.</p><br><a class="btn btn-primary" href="contact.html">Plan Your Order</a></div><div class="checks"><div>✔ Custom pre-order based preparation</div><div>✔ Premium visual styling and finish</div><div>✔ Suitable for gifting and special occasions</div><div>✔ Boutique, warm and luxurious feel</div></div></div></div></section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-title"><span class="mini">Simple & Elegant</span><h2>How Pre-Ordering Works</h2><p>A smooth and personalised order journey to make every celebration sweet, stylish and stress-free.</p></div>
-      <div class="grid grid-4">
-        <article class="panel icon-card"><div class="icon-badge">1</div><h3>Share Requirement</h3><p>Tell us your occasion, quantity, preferred items and delivery date.</p></article>
-        <article class="panel icon-card"><div class="icon-badge">2</div><h3>Curate Selection</h3><p>We help choose the right mix for celebrations, gifting or events.</p></article>
-        <article class="panel icon-card"><div class="icon-badge">3</div><h3>Fresh Preparation</h3><p>Your treats are handmade on pre-order with attention to freshness.</p></article>
-        <article class="panel icon-card"><div class="icon-badge">4</div><h3>Celebrate Beautifully</h3><p>Receive handcrafted sweets ready to delight your guests and loved ones.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer"><div class="container"><div class="footer-grid">
-    <div><h3>Tess N' Treats</h3><p>Handcrafted luxury puddings, brownies, cookies, cakes, dessert jars and fresh fruit squash for celebrations, gifting, events and parties.</p></div>
-    <div><h4>Quick Links</h4><ul class="footer-links-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h4>Specialities</h4><ul class="footer-links-list"><li>Puddings</li><li>Brownies</li><li>Cookies</li><li>Cakes</li><li>Dessert Jars</li><li>Fresh Fruit Squash</li></ul></div>
-    <div><h4>Contact</h4><ul class="footer-links-list"><li>hello@tessntreats.com</li><li>+971 XX XXX XXXX</li><li>Dubai, UAE</li><li>Custom Pre-Orders Only</li></ul></div>
-  </div><div class="copyright">© 2026 Tess N' Treats. All rights reserved.</div></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
