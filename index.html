@@ -44,14 +44,12 @@
     }
 
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 20px 0 10px;
-      position: relative;
-      z-index: 10;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* 🔥 THIS FIXES ALIGNMENT */
+  gap: 20px;
+  padding: 10px 0;       /* reduce top space */
+}
 
     .brand {
       display: flex;
