@@ -4,20 +4,283 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Tess N' Treats</title>
+  <meta name="description" content="Contact Tess N' Treats for custom dessert pre-orders, gifting boxes, parties, events and celebrations." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .inner-hero{
+      min-height: 420px;
+      background:
+        linear-gradient(90deg, rgba(34,16,12,.88) 0%, rgba(55,28,20,.68) 42%, rgba(55,28,20,.16) 72%, rgba(55,28,20,.05) 100%),
+        url('assets/hero-bg.jpg') center/cover no-repeat;
+      color:#fff4e7;
+      display:flex;
+      align-items:center;
+      position:relative;
+      box-shadow:var(--shadow);
+    }
+    .inner-hero::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-16px;
+      height:44px;
+      background:var(--cream);
+      border-top:3px solid rgba(200,155,86,.75);
+      border-radius:50% 50% 0 0 / 100% 100% 0 0;
+      transform:scaleX(1.02);
+    }
+    .inner-hero-content{
+      position:relative;
+      z-index:2;
+      padding:120px 0 80px;
+      max-width:700px;
+    }
+    .inner-hero h1{
+      font-family:'Great Vibes',cursive;
+      font-size:5rem;
+      color:#f1c87d;
+      font-weight:400;
+      line-height:1;
+      margin-bottom:12px;
+    }
+    .inner-hero p{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.9rem;
+      color:#fff4e7;
+    }
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:24px;
+      padding:55px 0 25px;
+    }
+    .contact-box{
+      background:#fff9f2;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+    .contact-box h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:2.2rem;
+      color:#64362a;
+      margin-bottom:14px;
+    }
+    .contact-box p{
+      color:#6c5145;
+      margin-bottom:12px;
+    }
+    .contact-list{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+    .contact-list div{
+      background:#fff;
+      border:1px solid rgba(95,48,36,.08);
+      border-radius:14px;
+      padding:14px 16px;
+      color:#6c5145;
+    }
+    .contact-form{
+      background:#fff9f2;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+    .contact-form h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:2.2rem;
+      color:#64362a;
+      margin-bottom:14px;
+    }
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+    .form-group{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .form-group.full{
+      grid-column:1 / -1;
+    }
+    .form-group label{
+      font-weight:600;
+      color:#64362a;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      padding:14px 16px;
+      border-radius:12px;
+      border:1px solid rgba(95,48,36,.15);
+      font:inherit;
+      background:#fff;
+      color:#2b1a14;
+    }
+    .form-group textarea{
+      min-height:150px;
+      resize:vertical;
+    }
+    .submit-btn{
+      display:inline-block;
+      background:linear-gradient(180deg,#945644 0%,#6e3a2d 100%);
+      color:#fff0e0;
+      padding:14px 28px;
+      border:0;
+      border-radius:999px;
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.3rem;
+      cursor:pointer;
+      box-shadow:0 10px 20px rgba(0,0,0,.18);
+    }
+    @media (max-width:950px){
+      .contact-wrap{grid-template-columns:1fr;}
+      .form-grid{grid-template-columns:1fr;}
+      .inner-hero h1{font-size:4rem;}
+      .inner-hero p{font-size:1.5rem;}
+    }
+  </style>
 </head>
-<body class="page-contact">
-  <div class="topbar"><div class="container"><div>Pre-order enquiries and custom quote requests</div><div>hello@tessntreats.com • +971 XX XXX XXXX</div></div></div>
-  <header class="site-header"><div class="container navbar"><a href="index.html" class="brand"><div class="brand-mark">T</div><div><h1>Tess N' Treats</h1><p>Delicacy Home Kitchen</p></div></a><nav class="nav-menu" id="navMenu"><div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a><a class="active" href="contact.html">Contact</a></div></nav><div class="nav-actions"><a class="btn btn-primary" href="contact.html">Pre-Order Now</a><button class="menu-toggle" id="menuToggle">☰</button></div></div></header>
+<body>
 
-  <section class="section"><div class="container"><div class="section-title"><span class="mini" style="color:#f3dfc8">Let's Create Something Sweet</span><h2 style="color:#fff1df">Pre-Order & Enquiry</h2><p style="color:#f2e4d3">Reach out to discuss your celebration, gifting or event dessert requirements.</p></div><div class="contact-grid"><div class="contact-panel"><h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#ffe0b0;margin-bottom:10px">Contact Tess N' Treats</h3><p>We would love to help you plan a beautiful sweet experience for your next occasion.</p><div class="checks" style="margin-top:18px"><div><strong>Email:</strong> hello@tessntreats.com</div><div><strong>Phone / WhatsApp:</strong> +971 XX XXX XXXX</div><div><strong>Location:</strong> Dubai, UAE</div><div><strong>Service Style:</strong> Custom Pre-Order Home Kitchen</div><div><strong>Best For:</strong> Celebrations, gifting, events and parties</div></div></div><form class="contact-form"><div class="form-grid"><div class="form-group"><label for="name">Your Name</label><input id="name" type="text" placeholder="Enter your name"></div><div class="form-group"><label for="phone">Phone Number</label><input id="phone" type="text" placeholder="Enter your phone number"></div><div class="form-group"><label for="email">Email Address</label><input id="email" type="email" placeholder="Enter your email"></div><div class="form-group"><label for="occasion">Occasion Type</label><select id="occasion"><option>Birthday</option><option>Anniversary</option><option>Gifting</option><option>Party</option><option>Event</option><option>Other</option></select></div><div class="form-group full"><label for="items">Treats Interested In</label><input id="items" type="text" placeholder="Example: puddings, brownies, dessert jars"></div><div class="form-group full"><label for="message">Order Details / Message</label><textarea id="message" placeholder="Tell us about quantity, date, gifting needs or special preferences"></textarea></div><div class="form-group full"><button class="btn btn-primary" type="submit">Send Enquiry</button></div></div></form></div></div></section>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Tess N' Treats Logo">
+        <div class="brand-text">
+          <h1>Tess N' Treats</h1>
+          <p>— Delicacy Home Kitchen —</p>
+        </div>
+      </a>
 
-  <section class="section-sm"><div class="container"><div class="section-title"><span class="mini" style="color:#f3dfc8">Helpful Answers</span><h2 style="color:#fff1df">FAQ</h2><p style="color:#f2e4d3">Clear answers help customers feel confident about placing a custom pre-order.</p></div><div class="faq-list"><div class="faq-item active"><button class="faq-question">Do you accept same-day orders?<span>+</span></button><div class="faq-answer">We are primarily a custom pre-order home kitchen, so advance notice is preferred. Update this section later with your actual lead time.</div></div><div class="faq-item"><button class="faq-question">Can I order for birthdays, events and gifting?<span>+</span></button><div class="faq-answer">Yes. Tess N' Treats is ideal for celebrations, intimate parties, event dessert tables, festive gifting and customised sweet orders.</div></div><div class="faq-item"><button class="faq-question">Can you customise orders?<span>+</span></button><div class="faq-answer">Yes. Customisation can be based on quantity, occasion, packaging style and preferred item mix depending on your offerings and capacity.</div></div></div></div></section>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">☰</button>
 
-  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Tess N' Treats</h3><p>Luxury handcrafted desserts for custom pre-orders and memorable moments.</p></div><div><h4>Quick Links</h4><ul class="footer-links-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li></ul></div><div><h4>Contact</h4><ul class="footer-links-list"><li>hello@tessntreats.com</li><li>+971 XX XXX XXXX</li><li>Dubai, UAE</li></ul></div><div><h4>Service Style</h4><ul class="footer-links-list"><li>Custom Pre-Orders</li><li>Luxury Gifting</li><li>Events & Parties</li></ul></div></div><div class="copyright">© 2026 Tess N' Treats. All rights reserved.</div></div></footer>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Our Treats</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="pre-btn">Pre-Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="inner-hero">
+    <div class="container">
+      <div class="inner-hero-content reveal">
+        <h1>Contact Us</h1>
+        <p>Get in touch for custom pre-orders, dessert boxes, gifting, celebrations, parties and special events.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="contact-wrap">
+      <div class="contact-box reveal">
+        <h2>Get in Touch</h2>
+        <p>We would love to help you plan a sweet experience for your next celebration or gifting requirement.</p>
+
+        <div class="contact-list">
+          <div><strong>Email:</strong> hello@tessntreats.com</div>
+          <div><strong>Phone:</strong> +971 XX XXX XXXX</div>
+          <div><strong>Location:</strong> Dubai, UAE</div>
+          <div><strong>Orders:</strong> Custom Pre-Orders Only</div>
+          <div><strong>Perfect for:</strong> Parties, events, gifting and celebrations</div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal">
+        <h2>Send an Enquiry</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter your phone number">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+          </div>
+
+          <div class="form-group">
+            <label for="occasion">Occasion Type</label>
+            <select id="occasion">
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Party</option>
+              <option>Event</option>
+              <option>Gifting</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label for="items">Items Interested In</label>
+            <input type="text" id="items" placeholder="Example: brownies, pudding jars, gifting box">
+          </div>
+
+          <div class="form-group full">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us about your requirement, quantity, delivery date or special request"></textarea>
+          </div>
+
+          <div class="form-group full">
+            <button type="submit" class="submit-btn">Send Enquiry</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <section class="testimonial">
+    <div class="container">
+      <img src="assets/lady.png" alt="Client" class="lady">
+
+      <h3 class="testimonial-title reveal">Let’s Make It Sweet</h3>
+
+      <div class="testimonial-text reveal">
+        <span class="quote">“</span>
+        Whether it is a celebration, a gift or a party table, we are here to create something beautiful for you.
+        <span class="quote">”</span>
+      </div>
+
+      <div class="footer-nav reveal">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Our Treats</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="socials reveal">
+        <span>f</span>
+        <span>ig</span>
+        <span>x</span>
+      </div>
+
+      <div class="copyright reveal">
+        © 2024 Tess N' Treats. All Rights Reserved.
+      </div>
+    </div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
