@@ -17,664 +17,9 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    .hero {
-      position: relative;
-      min-height: 720px;
-      background:
-        linear-gradient(90deg, rgba(34, 16, 12, 0.88) 0%, rgba(55, 28, 20, 0.68) 42%, rgba(55, 28, 20, 0.16) 72%, rgba(55, 28, 20, 0.05) 100%),
-        url("assets/hero-bg.jpg") center/cover no-repeat;
-      color: #fff4e7;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -16px;
-      height: 44px;
-      background: var(--cream);
-      border-top: 3px solid rgba(200, 155, 86, 0.75);
-      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-      transform: scaleX(1.02);
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 28px;
-      padding: 14px 0;
-      position: relative;
-      z-index: 10;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-shrink: 0;
-      position: relative;
-    }
-
-    .brand::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(240, 200, 120, 0.22) 0%, rgba(240, 200, 120, 0.10) 35%, rgba(240, 200, 120, 0.00) 72%);
-      filter: blur(8px);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .brand img {
-      width: 320px;
-      height: 320px;
-      object-fit: contain;
-      margin-top: -6px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .brand-text {
-      padding-top: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .brand-text h1 {
-      font-family: "Great Vibes", cursive;
-      font-size: 4.2rem;
-      font-weight: 400;
-      color: #f4c3c0;
-      line-height: 1;
-      margin: 0;
-    }
-
-    .brand-text p {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.12rem;
-      color: #f2dcc2;
-      margin-top: 8px;
-      letter-spacing: 0.4px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      flex-wrap: wrap;
-      padding: 14px 18px;
-      background: rgba(44, 22, 17, 0.34);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
-    }
-
-    .nav-links a {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.24rem;
-      color: #f2dfc6;
-      transition: all 0.3s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--gold-soft);
-    }
-
-    .pre-btn {
-      background: linear-gradient(180deg, #8a4d3c 0%, #693529 100%);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #fff0e0;
-      padding: 12px 22px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
-      border-radius: 6px;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #fff;
-      width: 46px;
-      height: 46px;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      min-height: 500px;
-      padding: 10px 0 90px;
-    }
-
-    .hero-copy {
-      max-width: 540px;
-    }
-
-    .hero-copy h2 {
-      font-family: "Great Vibes", cursive;
-      font-size: 6.1rem;
-      line-height: 0.9;
-      font-weight: 400;
-      color: #f1c87d;
-      margin-bottom: 18px;
-    }
-
-    .hero-copy p {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 2rem;
-      color: #fff4e8;
-      margin-bottom: 24px;
-    }
-
-    .hero-copy .menu-btn {
-      display: inline-block;
-      background: linear-gradient(180deg, #945644 0%, #6e3a2d 100%);
-      color: #fff0e0;
-      padding: 14px 28px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.3rem;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-
-    .hero-copy .menu-btn:hover,
-    .pre-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .top-cards {
-      margin-top: 36px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .cards-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .food-card {
-      background: #fffaf4;
-      border: 8px solid #f5eee4;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: 0.3s ease;
-    }
-
-    .food-card:hover,
-    .mini-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .food-card img {
-      width: 100%;
-      height: 215px;
-      object-fit: cover;
-    }
-
-    .caption {
-      background: linear-gradient(180deg, #6e392c 0%, #542820 100%);
-      color: #fff2e5;
-      text-align: center;
-      padding: 12px 12px 13px;
-    }
-
-    .caption h3 {
-      font-family: "Great Vibes", cursive;
-      font-size: 2rem;
-      font-weight: 400;
-      margin-bottom: 2px;
-    }
-
-    .caption p {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.15rem;
-      color: #f0dcc2;
-    }
-
-    .section {
-      padding: 34px 0 10px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    .ornament {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      margin-bottom: 10px;
-    }
-
-    .ornament::before,
-    .ornament::after {
-      content: "";
-      width: 300px;
-      max-width: 28vw;
-      height: 2px;
-      background: linear-gradient(90deg, transparent 0%, rgba(200, 155, 86, 0.95) 100%);
-    }
-
-    .ornament::after {
-      background: linear-gradient(90deg, rgba(200, 155, 86, 0.95) 0%, transparent 100%);
-    }
-
-    .ornament span {
-      color: var(--gold);
-      font-size: 1.8rem;
-      line-height: 1;
-    }
-
-    .section-title h2 {
-      font-family: "Great Vibes", cursive;
-      font-size: 4.5rem;
-      font-weight: 400;
-      line-height: 1;
-      color: #6b362b;
-    }
-
-    .section-title p {
-      margin-top: 6px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.75rem;
-      color: #6d5145;
-    }
-
-    .cards-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .mini-card {
-      background: #fff8f0;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: 0.3s ease;
-    }
-
-    .mini-card img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-    }
-
-    .mini-card .caption {
-      padding: 9px 10px 10px;
-    }
-
-    .mini-card .caption h4 {
-      font-family: "Great Vibes", cursive;
-      font-size: 2rem;
-      font-weight: 400;
-    }
-
-    .occasion {
-      padding: 20px 0 40px;
-      text-align: center;
-    }
-
-    .occasion-items {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      max-width: 940px;
-      margin: 18px auto 0;
-      gap: 10px;
-    }
-
-    .occasion-item {
-      padding: 8px 14px;
-      border-right: 1px solid rgba(105, 72, 57, 0.18);
-    }
-
-    .occasion-item:last-child {
-      border-right: none;
-    }
-
-    .occasion-item .icon {
-      font-size: 2.8rem;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .occasion-item h5 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.72rem;
-      font-weight: 500;
-      color: #6b372c;
-    }
-
-    .testimonial {
-      position: relative;
-      margin-top: 18px;
-      min-height: 360px;
-      background:
-        linear-gradient(90deg, rgba(37, 19, 14, 0.94) 0%, rgba(67, 37, 29, 0.9) 100%),
-        url("assets/hero-bg.jpg") center/cover no-repeat;
-      color: #fff5e8;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .testimonial::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.06), transparent 55%);
-      pointer-events: none;
-    }
-
-    .testimonial .container {
-      position: relative;
-      min-height: 360px;
-      padding: 24px 0 18px;
-    }
-
-    .testimonial-title {
-      text-align: center;
-      font-family: "Great Vibes", cursive;
-      font-size: 3.2rem;
-      color: #f1c87d;
-      font-weight: 400;
-      margin-bottom: 18px;
-    }
-
-    .testimonial-text {
-      max-width: 650px;
-      margin: 0 auto 18px;
-      text-align: center;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.8rem;
-      color: #fff6ea;
-      position: relative;
-      z-index: 2;
-    }
-
-    .testimonial-text .quote {
-      font-size: 2.8rem;
-      color: var(--gold-soft);
-      vertical-align: middle;
-    }
-
-    .lady {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 280px;
-      z-index: 2;
-    }
-
-    .dots {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin: 8px 0 18px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .dots span {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #f0d3a0;
-      opacity: 0.9;
-    }
-
-    .footer-nav {
-      margin-top: 42px;
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.34rem;
-      color: #f0ddc4;
-      position: relative;
-      z-index: 2;
-    }
-
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin: 10px 0;
-      position: relative;
-      z-index: 2;
-    }
-
-    .socials span {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: #d4a55f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #4e2b21;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .contact-strip {
-      margin-top: 16px;
-      background: rgba(33, 18, 14, 0.72);
-      border-top: 1px solid rgba(233, 202, 146, 0.25);
-      border-bottom: 1px solid rgba(233, 202, 146, 0.12);
-      position: relative;
-      z-index: 2;
-    }
-
-    .contact-strip .strip-inner {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      padding: 14px 0;
-    }
-
-    .contact-item {
-      text-align: center;
-      color: #f2dfc6;
-      font-size: 0.98rem;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 0 10px;
-    }
-
-    .contact-item:last-child {
-      border-right: none;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: #f1c87d;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.18rem;
-      margin-bottom: 3px;
-    }
-
-    .copyright {
-      text-align: center;
-      font-size: 0.98rem;
-      color: #ecd6bd;
-      position: relative;
-      z-index: 2;
-      padding-top: 12px;
-    }
-
-    @media (max-width: 1100px) {
-      .cards-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .cards-4 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-content {
-        min-height: 420px;
-      }
-    }
-
-    @media (max-width: 860px) {
-      .navbar {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .brand {
-        align-items: center;
-      }
-
-      .brand::before {
-        width: 120px;
-        height: 120px;
-        left: 8px;
-      }
-
-      .brand img {
-        width: 120px;
-        height: auto;
-        margin-top: 0;
-        filter: drop-shadow(0 4px 12px rgba(240, 200, 120, 0.35));
-      }
-
-      .brand-text {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-        position: static;
-      }
-
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding: 18px;
-        margin-top: 12px;
-        background: rgba(46, 23, 18, 0.96);
-        border-radius: 12px;
-        position: absolute;
-        top: 78px;
-        left: 0;
-        right: 0;
-        z-index: 50;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .hero-copy h2 {
-        font-size: 4.8rem;
-      }
-
-      .hero-copy p {
-        font-size: 1.6rem;
-      }
-
-      .section-title h2 {
-        font-size: 3.7rem;
-      }
-
-      .section-title p {
-        font-size: 1.45rem;
-      }
-
-      .cards-4,
-      .occasion-items,
-      .contact-strip .strip-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .occasion-item,
-      .contact-item {
-        border-right: none;
-        border-bottom: 1px solid rgba(105, 72, 57, 0.16);
-        padding-bottom: 16px;
-      }
-
-      .occasion-item:last-child,
-      .contact-item:last-child {
-        border-bottom: none;
-      }
-
-      .lady {
-        width: 210px;
-      }
-
-      .testimonial-text {
-        font-size: 1.45rem;
-        padding: 0 20px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .brand img {
-        width: 120px;
-        height: auto;
-      }
-
-      .hero-copy h2 {
-        font-size: 3.8rem;
-      }
-
-      .food-card img,
-      .mini-card img {
-        height: 200px;
-      }
-
-      .lady {
-        width: 170px;
-      }
-
-      .footer-nav {
-        gap: 14px;
-        font-size: 1.14rem;
-      }
-
-      .ornament::before,
-      .ornament::after {
-        width: 70px;
-      }
-    }
-  </style>
 </head>
 <body>
+
   <header class="hero">
     <div class="container">
       <div class="navbar">
@@ -791,20 +136,49 @@
 
   <section class="testimonial">
     <div class="container">
-      <img src="assets/lady.png" alt="Client" class="lady" />
+      <div class="testimonial-card-glass reveal">
+        <div class="testimonial-person">
+          <img src="assets/lady.png" alt="Client" class="lady-card" />
+        </div>
 
-      <h3 class="testimonial-title reveal">Client Testimonials</h3>
+        <div class="testimonial-content-wrap">
+          <h3 class="testimonial-title">Client Testimonials</h3>
 
-      <div class="testimonial-text reveal">
-        <span class="quote">“</span>
-        Absolutely delicious! The best brownies and puddings I’ve ever had!
-        <span class="quote">”</span>
-      </div>
+          <div class="testimonial-carousel">
+            <div class="testimonial-slide active">
+              <p class="testimonial-text">
+                <span class="quote">“</span>
+                Absolutely delicious! The best brownies and cakes I’ve ever had!
+                <span class="quote">”</span>
+              </p>
+              <div class="testimonial-name">Happy Customer</div>
+            </div>
 
-      <div class="dots reveal">
-        <span></span>
-        <span></span>
-        <span></span>
+            <div class="testimonial-slide">
+              <p class="testimonial-text">
+                <span class="quote">“</span>
+                Beautifully packed, premium in presentation, and full of homemade warmth.
+                <span class="quote">”</span>
+              </p>
+              <div class="testimonial-name">Dessert Lover</div>
+            </div>
+
+            <div class="testimonial-slide">
+              <p class="testimonial-text">
+                <span class="quote">“</span>
+                Perfect for gifting and celebrations. The pudding jars and brownies were a huge hit.
+                <span class="quote">”</span>
+              </p>
+              <div class="testimonial-name">Event Order Client</div>
+            </div>
+          </div>
+
+          <div class="dots testimonial-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
       </div>
 
       <div class="footer-nav reveal">
@@ -824,11 +198,11 @@
         <div class="strip-inner">
           <div class="contact-item">
             <strong>WhatsApp</strong>
-            <a href="https://wa.me/919961316474">+91 9961316474</a>
+            <a href="https://wa.me/971000000000">+971 XX XXX XXXX</a>
           </div>
           <div class="contact-item">
             <strong>Phone</strong>
-            <a href="tel:+919961316474">+91 9961316474</a>
+            <a href="tel:+971000000000">+971 XX XXX XXXX</a>
           </div>
           <div class="contact-item">
             <strong>Email</strong>
@@ -836,7 +210,7 @@
           </div>
           <div class="contact-item">
             <strong>Address</strong>
-            <span>Arunapuram|Pala|Kottayam|Keralam</span>
+            <span>Dubai, UAE</span>
           </div>
         </div>
       </div>
@@ -849,5 +223,4 @@
 
   <script src="script.js"></script>
 </body>
- 
 </html>
